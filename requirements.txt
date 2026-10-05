@@ -1,0 +1,5 @@
+google-adk>=1.0.0
+sympy>=1.13.0
+python-dotenv>=1.0.1
+pytest>=8.0.0
+streamlit>=1.40.0
