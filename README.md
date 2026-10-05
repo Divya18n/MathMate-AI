@@ -11,7 +11,21 @@ session-state so it stays context-aware across a multi-turn conversation.
 > instructions and session-state management for context-aware,
 > multi-turn tutoring conversations."*
 
-**Model backend:** runs on **Gemini 2.5 Flash** natively via Google ADK.
+**Model backend:** runs on **Gemini** natively via Google ADK.
+
+
+## Demo (running locally)
+
+Streamlit web UI: topic buttons, step-by-step tutoring chat, and a live progress sidebar.
+
+![Demo 1](screenshots/demo-1.png)
+![Demo 2](screenshots/demo-2.png)
+![Demo 3](screenshots/demo-3.png)
+![Demo 4](screenshots/demo-4.png)
+![Demo 5](screenshots/demo-5.png)
+![Demo 6](screenshots/demo-6.png)
+![Demo 7](screenshots/demo-7.png)
+![Demo 8](screenshots/demo-8.png)
 
 ---
 
@@ -39,10 +53,11 @@ to escalate specificity, and *how* to keep the student motivated.
 ```
 mathmate-ai/
 ├── mathmate/
-│   ├── agent.py          # root_agent: Agent(model="gemini-2.5-flash", ...)
+│   ├── agent.py          # root_agent: Agent(model="gemini-3.1-flash-lite", ...)
 │   ├── prompts.py         # Socratic tutoring instructions
 │   ├── tools.py           # generate_practice_problem, check_algebra_step, update_mastery
 │   └── state_schema.py    # session-state keys + default factory
+├── app.py                  # Streamlit web app (chat UI + progress sidebar)
 ├── main.py                 # interactive CLI runner (Runner + InMemorySessionService)
 ├── tests/
 │   └── test_tools.py       # unit tests for the deterministic tools (no API key needed)
